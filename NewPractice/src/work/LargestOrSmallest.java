@@ -12,7 +12,7 @@ public class LargestOrSmallest {
 		
 		for(int i = 1; i < num.length; i++)
 		{
-			if(num[i] > largest)
+			if(num[i] > largest) 
 				largest = num[i];
 		
 			else if(num[i] < smallest)
