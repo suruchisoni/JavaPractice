@@ -13,7 +13,7 @@ public class EchoTest {
 			e1.count = e1.count + 1;
 			
 			if(x == 3){
-				e2.count = e2.count + e1.count;
+ 				e2.count = e2.count + 1;
 				
 			}
 			
@@ -23,7 +23,7 @@ public class EchoTest {
         x = x + 1;			
 		}
 		
-		//System.out.println(e2.count());
+		System.out.println(e2.count);
 	}
 
 }

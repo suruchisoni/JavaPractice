@@ -4,11 +4,11 @@ public class ReverseAString {
 
 	public static void main(String[] args) {
 		//using string buffer and reverse
-		/*{
+		{
 		StringBuffer sb = new StringBuffer("game plan");
 		sb.reverse();
 		System.out.println(sb);
-		}*/
+		}
 		
 		//iterative method
 		{

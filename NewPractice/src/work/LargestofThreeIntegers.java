@@ -6,7 +6,7 @@ public class LargestofThreeIntegers {
 
 		int x = 2 , y = 54 , z = 9;
 		
-		if(x > y && x > y)
+		if(x > y && x > z)
 			System.out.println("x is the largest number");
 		
 		else if(y > x && y > z)
