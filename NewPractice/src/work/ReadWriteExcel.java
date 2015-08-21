@@ -6,13 +6,15 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import jxl.write.Label;
-import jxl.write.WritableWorkbook;
+
+
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
@@ -77,43 +79,46 @@ public class ReadWriteExcel {
       }
 
   @Test
-  public void newmethod() throws IOException{
+  public void newmethod() throws Exception{
 	  
 	  FirefoxDriver driver;
-	  
-	  driver = new FirefoxDriver();
-	  
+	  driver = new FirefoxDriver(); 
 	  driver.get("https://www.amazon.com");
+  
+ 
+	  String a = driver.findElement(By.xpath(".//*[@id='nav-your-amazon']")).getText();
+	  String b = driver.findElement(By.xpath(".//*[@id='nav-xshop']/a[2]")).getText();
+	  String c = driver.findElement(By.xpath(".//*[@id='nav-xshop']/a[3]")).getText();
+
 	  
-	  String a,b;
+	  System.out.println("data is:"+ a);
 	  
-	  File fExcel = new File("C:\\Users\\suruchi_soni\\Desktop\\Suruchi\\Selenium\\test\\Input.xls");
-      HSSFWorkbook wb = new HSSFWorkbook (); 
-      HSSFWorkbook wb =  HSSFWorkbook.create(fExcel);
-      wb.createSheet("Data");
-	  
-	  for(int i = 0; i < 3; i++) {
-	        int j = i + 1 ;
-	        a = driver.findElement(By.xpath(".//*[@id='nav-your-amazon']")).getText();
-	        System.out.println("data1 = " +  a);
-	        b = driver.findElement(By.xpath(".//*[@id='nav-xshop']/a[2]")).getText();
-	        System.out.println("data2 = " +  b);
-
-	        
-
-	        HSSFSheet sh = wb.getSheetAt(0);
-
-	        Label data1  = new Label(j, 1, a);
-	        sh.createRow(0);
-
-	        Label data2 = new Label(j, 1, b);
-	        sh.createRow(1);
-	        
-	        FileOutputStream fos = new FileOutputStream("C:\\Users\\suruchi_soni\\Desktop\\Suruchi\\Selenium\\test\\Input.xls");
-	        wb.write(fos);
-	        wb.close();               
-	    }
-  }
+	  File file = new File("testdata\\testfile.xls");
+	  FileInputStream fis = new FileInputStream(file);
+	  Workbook wb = new HSSFWorkbook(fis);
+	  HSSFSheet sh = (HSSFSheet)wb.getSheetAt(0);
+		//HSSFSheet sh = (HSSFSheet)wb.createSheet("Test");
+		HSSFRow r = sh.createRow(0);
+		HSSFCell cell = r.createCell(0);
+		cell.setCellType(cell.CELL_TYPE_STRING);
+		cell.setCellValue(a);
+		
+		HSSFRow r1 = sh.createRow(1);
+		HSSFCell cell1 = r1.createCell(0);
+		cell1.setCellType(cell.CELL_TYPE_STRING);
+		cell1.setCellValue(b);
+		
+		HSSFRow r2 = sh.createRow(2);
+		HSSFCell cell2 = r2.createCell(0);
+		cell2.setCellType(cell.CELL_TYPE_STRING);
+		cell2.setCellValue(c);
+		
+		FileOutputStream fos = new FileOutputStream(file);
+		wb.write(fos);
+		wb.close();
+		driver.quit();  
+	   
+       }
     
    }
 
