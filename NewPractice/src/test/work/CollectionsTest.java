@@ -3,7 +3,7 @@ package test.work;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import work.Student;
+import BasicJavaProgs.Student;
 
 
 public class CollectionsTest {

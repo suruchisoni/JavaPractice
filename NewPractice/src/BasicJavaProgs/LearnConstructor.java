@@ -1,4 +1,4 @@
-package work;
+package BasicJavaProgs;
 
 public class LearnConstructor {
 	

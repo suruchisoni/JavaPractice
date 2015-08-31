@@ -1,4 +1,4 @@
-package work;
+package BasicJavaProgs;
 
 public class Echo {
 	public int count = 0;

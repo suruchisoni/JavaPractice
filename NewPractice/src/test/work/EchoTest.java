@@ -1,6 +1,6 @@
 package test.work;
 
-import work.Echo;
+import BasicJavaProgs.Echo;
 
 public class EchoTest {
 	public static void main(String args[]){

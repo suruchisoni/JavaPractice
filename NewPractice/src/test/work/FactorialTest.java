@@ -5,7 +5,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import work.Factorial;
+import BasicJavaProgs.Factorial;
 
 public class FactorialTest {
 

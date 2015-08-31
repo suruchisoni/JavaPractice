@@ -1,5 +1,5 @@
 package test.work;
-import work.LearnConstructor;
+import BasicJavaProgs.LearnConstructor;
 
 
 public class LearnConstructorTest {

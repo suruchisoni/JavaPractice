@@ -1,4 +1,4 @@
-package work;
+package BasicJavaProgs;
 
 public class Student {
 	int rollno, age;

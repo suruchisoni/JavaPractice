@@ -5,7 +5,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import work.Fibonacci;
+import BasicJavaProgs.Fibonacci;
 
 public class FibonacciTest {
 	//creating variable fibonacci of class Fibonacci

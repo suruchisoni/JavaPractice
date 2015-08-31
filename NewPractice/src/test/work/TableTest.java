@@ -5,7 +5,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import work.MultiplicationTable;
+import BasicJavaProgs.MultiplicationTable;
 
 public class TableTest {
 	public MultiplicationTable mTable;
