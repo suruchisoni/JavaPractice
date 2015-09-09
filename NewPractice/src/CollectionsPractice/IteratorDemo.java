@@ -22,8 +22,10 @@ public class IteratorDemo {
 		      System.out.print("Original contents of al: ");
 		      Iterator itr = al.iterator();
 		      while(itr.hasNext()) {
-		         Object element = itr.next();
-		         System.out.print(element + " ");
+		         /*Object element = itr.next();
+		         System.out.print(element + " "); //OR
+*/		         
+		         System.out.println(itr.next());
 		      }
 		      System.out.println();
 		      
@@ -44,8 +46,8 @@ public class IteratorDemo {
 		      // Now, display the list backwards
 		      System.out.print("Modified list backwards: ");
 		      while(litr.hasPrevious()) {
-		         Object element = litr.previous();
-		         System.out.print(element + " ");
+		         //Object element = litr.previous();
+		         System.out.print(litr.previous());
 		       }
 		       System.out.println();
 		    }

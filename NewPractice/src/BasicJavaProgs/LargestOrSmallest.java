@@ -5,7 +5,7 @@ public class LargestOrSmallest {
 	public static void main(String args[])
 	{
 		
-		int num[] = {56,3,85,95,45,101,63};
+		int num[] = {56,3,85,95,45,101,63, -1};
 		
 		int smallest = num[0];
 		int largest = num[0];

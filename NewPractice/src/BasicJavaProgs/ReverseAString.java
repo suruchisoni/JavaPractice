@@ -20,7 +20,7 @@ public class ReverseAString {
 	            System.out.print(strArray[i]);   
 	        }
 	 
-	        System.out.println();								
+	        //System.out.println();								
 		}
 		
 		
