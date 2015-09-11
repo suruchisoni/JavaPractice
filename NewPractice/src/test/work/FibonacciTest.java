@@ -24,12 +24,12 @@ public class FibonacciTest {
 	@Test
 	public void testFibonacci(){
 		int x[] = {0,1,1,2,3};
-		int y [] = fibonacci.fibonacci(5);
+		int y [] = fibonacci.fibonacci(8);
 		for (int l : y){
 			System.out.println(l);
 		}
 		System.out.println("Array is " + y);
-		Assert.assertEquals(fibonacci.fibonacci(5),x);  //object.method name
+		Assert.assertEquals(fibonacci.fibonacci(8),x);  //object.method name
 		
 	}
 

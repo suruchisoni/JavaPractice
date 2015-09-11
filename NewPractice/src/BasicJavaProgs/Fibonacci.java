@@ -19,7 +19,15 @@ public class Fibonacci {
 	}
 	
 	
-	
+	public static void main(String args[]){
+		Fibonacci f = new Fibonacci();
+		int [] x = f.fibonacci(8);
+		for (int i : x){
+			System.out.println(i);
+		}
+		
+			
+	}
 	
 
 }
