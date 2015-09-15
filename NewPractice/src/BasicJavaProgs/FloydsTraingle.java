@@ -8,7 +8,7 @@ public class FloydsTraingle {
 	      System.out.println("Floyd's triangle :-");
 	 
 	      for ( c = 1 ; c <= n ; c++ )
-	      {
+	      { 
 	         for ( d = 1 ; d <= c ; d++ )
 	         {
 	            System.out.print(num+" ");
