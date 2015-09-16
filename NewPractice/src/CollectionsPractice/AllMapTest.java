@@ -15,16 +15,24 @@ public class AllMapTest {
 		HashMap<Integer, String> hm = new HashMap<Integer, String> ();
 		hm.put(15, "value1");
 		hm.put(115, "value231");
-		hm.put(155, "value5451");
+		hm.put(155, "value5451"); 
 		hm.put(155, "value5451");
 		
 	      /* Display content using Iterator*/
 		Set set = hm.entrySet(); //returns the Set view containing all the keys and values.
 		Iterator itr = set.iterator();
+		
+		System.out.println("------using iterator");
 		while(itr.hasNext()){
 			Map.Entry me = (Entry) itr.next();
 			System.out.println("key is: "+ me.getKey() + " & Value is: ");
 	         System.out.println(me.getValue());
+		}
+		
+		//OR
+		System.out.println("------using for loop");
+		for(Map.Entry me: hm.entrySet()){
+			System.out.println(me.getKey() +" :: "+ me.getValue());
 		}
 					
 		/* Get values based on key*/
