@@ -6,13 +6,13 @@ import org.openqa.selenium.WebDriver;
 public class Guru99Login {
 	WebDriver driver;
 	 
-    By user99GuruName = By.name("uid");
+    public static String user99GuruName = "uid";
  
-    By password99Guru = By.name("password");
+    public static String password99Guru = "password";
  
-    By titleText =By.className("barone");
+    public static String titleText ="barone";
  
-    By login = By.name("btnLogin");
+    public static String login = "btnLogin";
  
      
  
@@ -26,7 +26,7 @@ public class Guru99Login {
  
     public void setUserName(String strUserName){
  
-        driver.findElement(user99GuruName).sendKeys(strUserName);;
+        driver.findElement(By.name(user99GuruName)).sendKeys(strUserName);;
  
     }
  
@@ -36,7 +36,7 @@ public class Guru99Login {
  
     public void setPassword(String strPassword){
  
-         driver.findElement(password99Guru).sendKeys(strPassword);
+         driver.findElement(By.name(password99Guru)).sendKeys(strPassword);
  
     }
  
@@ -46,7 +46,7 @@ public class Guru99Login {
  
     public void clickLogin(){
  
-            driver.findElement(login).click();
+            driver.findElement(By.name(login)).click();
  
     }
  
@@ -56,7 +56,7 @@ public class Guru99Login {
  
     public String getLoginTitle(){
  
-     return    driver.findElement(titleText).getText();
+     return    driver.findElement(By.className(titleText)).getText();
  
     }
  

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class Guru99HomePage {
 	 WebDriver driver;
 	 
-	    By homePageUserName = By.xpath("//table//tr[@class='heading3']");
+	 public static String homePageUserName = "//table//tr[@class='heading3']";
 	 
 	     
 	 
@@ -22,7 +22,7 @@ public class Guru99HomePage {
 	 
 	        public String getHomePageDashboardUserName(){
 	 
-	         return    driver.findElement(homePageUserName).getText();
+	         return    driver.findElement(By.xpath(homePageUserName)).getText();
 	 
 	        }
 	 
