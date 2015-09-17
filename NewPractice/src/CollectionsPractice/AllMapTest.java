@@ -16,7 +16,7 @@ public class AllMapTest {
 		hm.put(15, "value1");
 		hm.put(115, "value231");
 		hm.put(155, "value5451"); 
-		hm.put(155, "value5451");
+		hm.put(155, "value545");
 		
 	      /* Display content using Iterator*/
 		Set set = hm.entrySet(); //returns the Set view containing all the keys and values.
