@@ -1,27 +1,26 @@
 package BasicJavaProgs;
 
-import java.util.Scanner;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+
 
 public class Palindrome {
 
-	public static void main(String[] args) {
-		{
-
-		String s = "Madam";
-		String rev = "";
+	public boolean isPalindrome(String a) {
+		int i = 0;
+		int j = a.length() - 1;
 		
-		for(int i = s.length()-1; i >= 0; i--){
-			rev = rev + s.charAt(i);
+		char[] Array = a.toCharArray();
+		
+		for(i = 0; i < j; i++,j--){
+			if(Array[i] != Array[j]){
 		}
-			System.out.print(rev+"\n");
 			
-			if(rev.equalsIgnoreCase(s)){
-				System.out.println("String is palindrome");
-			
-			}		
+			}
+		return false;		
 		}
-		{
-		int num = 11;
+	
+	public boolean isNumPalindrome(int num){
 		int r = 0;
 		int x = num;
 
@@ -30,16 +29,25 @@ public class Palindrome {
 		r = r + num%10;
 		x = x/10;
 		}
-		System.out.println(r);
-		if(num == r)
-			System.out.println("num is palindrome");
-			else
-				System.out.println("num is not palindrome");
+		if(r == num){
 		}
+		return true;
+		}
+	
+	@Test
+	public void palindromeTest(){
+		
+		Palindrome p = new Palindrome();
+		String a = "Madam";
+		int num = 111;
+		
+		AssertJUnit.assertEquals(false, p.isPalindrome(a));
+		AssertJUnit.assertEquals(true, p.isNumPalindrome(num));
+	}
 				
 		
 	}
-	}
+	
 	
 
 

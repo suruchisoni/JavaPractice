@@ -58,32 +58,35 @@ public class SpecialCases {
 	    	
 	    }
 	    
-	    @Test
+	    
 	    public void frame() throws InterruptedException{
 	    	 driver.get("https://amazon.com");
 	    	 Thread.sleep(2000);
 	    	 List<WebElement> list = driver.findElements(By.tagName("iframe"));
 	    	 System.out.println(list.size());
 	    	driver.switchTo().frame(0);
+	    	driver.switchTo().defaultContent(); //switch to main window
 	    }
 	    
-	    WebDriverWait wait = new WebDriverWait(driver, 20);
-	    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.className("asd")));
+	   /* WebDriverWait wait = new WebDriverWait(driver, 20);
+	    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.className("asd")));*/
 	     
 	    
 	    
 	    
 	    
 	    
-	    
+	    @Test
 	    public void findLinks() throws InterruptedException{
+	    	
 	    driver.get("https://www.google.com");
 	    Thread.sleep(3000);
 	    driver.findElement(By.className("gsfi")).click();
 	    driver.findElement(By.className("gsfi")).sendKeys("Selenium");
 	    driver.findElement(By.className("lsb")).click();
 	    Thread.sleep(3000);
-	    List<WebElement> list = driver.findElements(By.xpath("//h3[@class='r']/a"));
+	    List<WebElement> list = driver.findElements(By.xpath("//a[contains(.,'Selenium']"));
+	    //List<WebElement> list = driver.findElements(By.xpath("//h3[@class='r']/a"));
 	    System.out.println("Number of links:" + list.size());
 	    List<WebElement> subList = driver.findElements(By.xpath("//div[@class='f kv _SWb']/cite"));
 	    

@@ -2,10 +2,9 @@ package BasicJavaProgs;
 
 public class ArmstongNumber {
 
-	public static void main(String[] args) {
+	public int armstrong(int n) {
 		
-		int n = 371;
-		int r, sum = 0, temp = n;
+		int r = 0, sum = 0, temp = n;
 		
 		while(temp != 0){
 			r = temp % 10;
@@ -13,13 +12,8 @@ public class ArmstongNumber {
 			temp = temp/10;
 
 		}
-		if(sum==n){
-			System.out.println("n is armstrong");
-		}
-		else{
-			
-			System.out.println("n is not armstong");
-}
+		return sum;
+		
+	}
 
-}
 }

@@ -4,57 +4,26 @@ import java.util.Scanner;
 
 public class Test {
 	
-	 public static void main(String args[])
-	 {
-		 int i,j,c;
-         c=1;
-loop1: for(i=1;i<=6;i++)
-            {
-              for(j=1;j<=i;j++)
-              {
-                     if(c>6)
-                          continue loop1;
-                  System.out.print(" "+c);
-                   c++;                   
-             }
-             System.out.println("\n");
-        }
-	 }
-	 
-	 
-	   {/*
-	      {
-	    	  int x, y, temp;
-	      
-	      System.out.println("Enter x and y");
-	      Scanner in = new Scanner(System.in);
-	 
-	      x = in.nextInt();
-	      y = in.nextInt();
-	 
-	      System.out.println("Before Swapping\nx = "+x+"\ny = "+y);
-	 
-	      temp = x;
-	      x = y;
-	      y = temp;
-	 
-	      System.out.println("After Swapping\nx = "+x+"\ny = "+y);
-	      }
-	      
-	      {
-
-	  		
-	  		int fact = 1;
-	  		for(int i=3; i >= 1; i--){
-	  			fact=fact*i;
-	  		}
-	  		System.out.println(fact);
-	  		}
-	    
-	      
-	  	
-	      */}
-	      
+	static void findMissingNumbers(int[] a, int first, int last) {
+    /*    // before the array: numbers between first and a[0]-1
+for (int i = first; i < a[0]; i++) {
+    System.out.println(i);
+}*/
+        // inside the array: at index i, a number is missing if it is between a[i-1]+1 and a[i]-1
+for (int i = 1; i < a.length; i++) {
+    for (int j = 1+a[i-1]; j < a[i]; j++) {
+        System.out.println(j);
+    }
+}
+        /*// after the array: numbers between a[a.length-1] and last
+for (int i = 1+a[a.length-1]; i <= last; i++) {
+    System.out.println(i);
+}*/
+}
+	public static void main(String[] args) {
+	    int a[] = { 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 18, 20, 21, 23 };
+	    findMissingNumbers(a, 0, 25);
+	}
 	      
 	   }
 

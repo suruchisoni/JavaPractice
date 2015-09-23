@@ -1,9 +1,10 @@
 package BasicJavaProgs;
+import org.testng.annotations.Test;
 
 public class FloydsTraingle {
-	public static void main(String args[])
-	   {
-	      int n = 5, num = 1, c, d;
+	
+	public void floyds(int n){
+	      int num = 1, c, d;
 	     	 
 	      System.out.println("Floyd's triangle :-");
 	 
@@ -17,6 +18,16 @@ public class FloydsTraingle {
 	 
 	         System.out.println();
 	      }
+		
 	   }
+	
+	@Test
+	public void fTest(){
+		FloydsTraingle f = new FloydsTraingle();
+		f.floyds(3);
+	
+	}
+	
+	
 
 }
